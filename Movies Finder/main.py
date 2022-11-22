@@ -2,20 +2,29 @@
 # pip install mysql-connector, pip install wheel
 import mysql.connector
 
-connection = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    password = "",
-    database = "test"
-)
 
-cursor = connection.cursor()
+def find_platforms(movie_name):
+    connection = mysql.connector.connect(
+        host = "localhost",
+        user = "root",
+        password = "",
+        database = "movies"
+    )
 
-query1 = "select * from test"
+    cursor = connection.cursor()
 
-cursor.execute(query1)
+    query = f"select platforms from platforms WHERE name = '{movie_name}'"
+    cursor.execute(query)
 
-table = cursor.fetchall()
+    table = cursor.fetchall()
 
-for row in table:
-    print(row)
+    # table is a list(tuple()) so we just want to return the values in the tuple
+    return table[0][0]
+
+
+movie_name = input("What movie would you like to search for?\n")
+
+platforms = find_platforms(movie_name)
+platforms = platforms.replace(",", "\n")
+
+print(f"The movie {movie_name} can be found on: \n{platforms}")
