@@ -18,13 +18,18 @@ def find_platforms(movie_name):
 
     table = cursor.fetchall()
 
-    # table is a list(tuple()) so we just want to return the values in the tuple
-    return table[0][0]
+    # check if movie exists
+    if not table:
+        print(f"{movie_name} does not exist in our database")
+    else:
+        # table is a list(tuple()) so we just want to return the values in the tuple
+        return table[0][0]
 
 
 movie_name = input("What movie would you like to search for?\n")
 
 platforms = find_platforms(movie_name)
-platforms = platforms.replace(",", "\n")
 
-print(f"The movie {movie_name} can be found on: \n{platforms}")
+if platforms:
+    platforms = platforms.replace(",", "\n")
+    print(f"The movie {movie_name} can be found on: \n{platforms}")
