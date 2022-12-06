@@ -1,5 +1,4 @@
 # Project created by: Ben Cook, Erik Konnath, James Coddington, Viet Ninh
-# pip install mysql-connector, pip install wheel
 import sqlite3
 
 connection = sqlite3.connect("MoviesFinder.db")
