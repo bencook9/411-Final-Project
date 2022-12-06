@@ -14,4 +14,4 @@ A command will show up asking you if you would like to search for movies or sear
 
 ## Future
 
-Currently we have a limited selection of movies as they are all put in by hand. In the future we wish to get all types of movies dynamically from the streamiong services themselves.
+Currently we have a limited selection of movies as they are all put in by hand. In the future we wish to get all types of movies dynamically from the streaming services themselves.
