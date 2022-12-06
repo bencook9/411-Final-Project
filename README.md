@@ -8,7 +8,7 @@ A-Live is an application which stores movies and where to watch them in a databa
 
 Open a terminal or powershell window and make sure you are within the scope of this project.
 
-run `python main.py` or `python3 main.py` based on the installation of Python on your machine. If you do not have Python installed on your machine follow the instructions here [here](https://www.python.org/downloads/).
+run `python main.py` or `python3 main.py` based on the installation of Python on your machine. If you do not have Python installed on your machine follow the instructions [here](https://www.python.org/downloads/).
 
 A command will show up asking you if you would like to search for movies or search for platforms. Searching by movies will show you all the streaming services you can stream the movies off of. If you search by platform it gives you the current catalog of movies on that platform.
 
